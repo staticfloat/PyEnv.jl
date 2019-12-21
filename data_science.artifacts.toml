@@ -1,0 +1,116 @@
+["IPython-7.10.2"]
+git-tree-sha1 = "10a539b2119dc4f1ca8bfbc3d61c99888c4ead34"
+
+["backcall-0.1.0"]
+git-tree-sha1 = "9f25750ce5e68ebf2adac64ac146b9812ad62ae0"
+
+[bin]
+git-tree-sha1 = "51d34754c8d8b6b17c724cf7292ddffe1aab331c"
+
+["cycler-0.10.0"]
+git-tree-sha1 = "a294d568a1e5a673d671b3769fabbda161241229"
+
+["cycler.py-0.10.0"]
+git-tree-sha1 = "a294d568a1e5a673d671b3769fabbda161241229"
+
+["dateutil-2.8.1"]
+git-tree-sha1 = "449c1515c25b190a70231cedee918df84ee542d9"
+
+["decorator.py-4.4.1"]
+git-tree-sha1 = "4d0cb476a3ef8871fe281d0ca4bf5acc8e65c5fe"
+
+["easy_install-42.0.2"]
+git-tree-sha1 = "b0288c8bc0622702e05653fadaf5270249d0cdd6"
+
+["easy_install.py-42.0.2"]
+git-tree-sha1 = "b0288c8bc0622702e05653fadaf5270249d0cdd6"
+
+["ipython_genutils-0.2.0"]
+git-tree-sha1 = "4c595115a3d7189775034d4cffc5d0817a9abef3"
+
+["jedi-0.15.2"]
+git-tree-sha1 = "69df37c3916c39fbcff4ef5de65e04543b1cf3f7"
+
+[["kiwisolver.cpython-38-x86_64-linux-gnu.so-1.1.0"]]
+arch = "x86_64"
+git-tree-sha1 = "d533174f0689d76892bd39854cfef7403866ddd9"
+libc = "glibc"
+os = "linux"
+
+[["matplotlib-3.1.2"]]
+arch = "x86_64"
+git-tree-sha1 = "e82539b6ec3b692df34261b15c15a5e393bf2c5d"
+libc = "glibc"
+os = "linux"
+
+[["mpl_toolkits-3.1.2"]]
+arch = "x86_64"
+git-tree-sha1 = "fb38c1b147fe5ffbdb974a97c86296bbc588e091"
+libc = "glibc"
+os = "linux"
+
+[["numpy-1.17.4"]]
+arch = "x86_64"
+git-tree-sha1 = "897932b44773217ab179619732010b5ab7f508bc"
+libc = "glibc"
+os = "linux"
+
+["parso-0.5.2"]
+git-tree-sha1 = "9b86b220ad233b1333e91b2a127e965a419fbd31"
+
+["pexpect-4.7.0"]
+git-tree-sha1 = "08185a5418e1d03c8f710bf9740aa32a4a9d3761"
+
+["pickleshare.py-0.7.5"]
+git-tree-sha1 = "0cd0dacba71800d988d633f029ea808abf2e3784"
+
+["pkg_resources-42.0.2"]
+git-tree-sha1 = "ac9d809ab9dc0baaf26ad4b42ec41d2c1c629915"
+
+["prompt_toolkit-3.0.2"]
+git-tree-sha1 = "7ca4e0abf8692b170a62bac663e9d3781a824e9f"
+
+["ptyprocess-0.6.0"]
+git-tree-sha1 = "db7b1cc38785235c6229d803bc880aecb22b6490"
+
+["pygments-2.5.2"]
+git-tree-sha1 = "90e88b9e3e146487e93b16654d08b83410bcaeb7"
+
+[["pylab-3.1.2"]]
+arch = "x86_64"
+git-tree-sha1 = "99f5361648ccc88f57b3f4e8811f175cf86ea2ea"
+libc = "glibc"
+os = "linux"
+
+[["pylab.py-3.1.2"]]
+arch = "x86_64"
+git-tree-sha1 = "99f5361648ccc88f57b3f4e8811f175cf86ea2ea"
+libc = "glibc"
+os = "linux"
+
+["pyparsing-2.4.5"]
+git-tree-sha1 = "f8f21599615b6d2ef29233b8eb70d2c929a22a36"
+
+["pyparsing.py-2.4.5"]
+git-tree-sha1 = "f8f21599615b6d2ef29233b8eb70d2c929a22a36"
+
+[["scipy-1.4.1"]]
+arch = "x86_64"
+git-tree-sha1 = "cb42d0a29881361da43e54c69e1512e7877a038b"
+libc = "glibc"
+os = "linux"
+
+["setuptools-42.0.2"]
+git-tree-sha1 = "cae661c4e6c938cffe6fbbb9581cd50517c92e23"
+
+["six-1.13.0"]
+git-tree-sha1 = "03caf9fd156d492b5d945a31f3f6ef1f666ad7fd"
+
+["six.py-1.13.0"]
+git-tree-sha1 = "03caf9fd156d492b5d945a31f3f6ef1f666ad7fd"
+
+["traitlets-4.3.3"]
+git-tree-sha1 = "84795c53a3c490abae8ab1f2bca0c3bbb55d0af8"
+
+["wcwidth-0.1.7"]
+git-tree-sha1 = "81f4adc833027f20021091481608e19944c3c338"
