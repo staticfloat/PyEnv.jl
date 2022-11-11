@@ -1,11 +1,9 @@
+using Scratch
+
 # It's amazing how often I need this
 pathsep = Sys.iswindows() ? ";" : ":";
 
-function env_dir(name::String)
-    dir = joinpath(dirname(@__DIR__), "envs", name)
-    mkpath(dir)
-    return dir
-end
+env_dir(name::String) = @get_scratch!(string(name, ".env"))
 rm_env(env_name::String) = rm(env_dir(env_name); force=true, recursive=true)
 
 function with_pyenv(f::Function, env_name::String)

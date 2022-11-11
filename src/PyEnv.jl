@@ -1,7 +1,7 @@
 module PyEnv
-using Python_jll, HTTP, JSON, Random, Libdl
+using Python_jll, HTTP, JSON, Random, Libdl, Scratch
 using Gumbo, AbstractTrees
-using Pkg, Pkg.Artifacts, Pkg.BinaryPlatforms, SHA
+using Pkg, Pkg.Artifacts, SHA
 
 # Re-export `python()` from `Python_jll` for easy access
 export python

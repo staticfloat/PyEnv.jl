@@ -1,36 +1,44 @@
-# This should probably be in Pkg.BinaryPlatforms.  :/
-struct AnyPlatform <: Platform; end
+using Base.BinaryPlatforms
+struct AnyPlatform <: AbstractPlatform; end
 Pkg.BinaryPlatforms.platform_name(p::AnyPlatform) = "any"
 Base.show(io::IO, p::AnyPlatform) = write(io, "any")
 
 struct WheelABI
     versions::Vector{String}
     abi_flags::Vector{Symbol}
-    platform::Platform
+    platform::AbstractPlatform
 end
 
-# This is locked to Python_jll
-default_python_abi() = WheelABI(["3.8"], Symbol[], platform_key_abi())
+# This is locked to Python_jll``
+default_python_abi() = WheelABI(["3.10"], Symbol[], HostPlatform())
 
 function parse_wheel_tag(platform_tag::AbstractString)
     if startswith(platform_tag, "macosx_")
-        return MacOS()
+        if occursin("x86_64", platform_tag)
+            return Platform("x86_64", "macos")
+        elseif occursin("arm64", platform_tag)
+            return Platform("aarch64", "macos")
+        end
     elseif startswith(platform_tag, "manylinux")
         if occursin("i686", platform_tag)
-            return Linux(:i686)
+            return Platform("i686", "linux")
         elseif occursin("x86_64", platform_tag)
-            return Linux(:x86_64)
+            return Platform("x86_64", "linux")
+        elseif occursin("aarch64", platform_tag)
+            return Platform("aarch64", "linux")
+        elseif occursin("armv7l", platform_tag)
+            return Platform("armv7l", "linux")
         end
     elseif startswith(platform_tag, "win")
         if platform_tag == "win32"
-            return Windows(:i686)
+            return Platform("i686", "windows")
         elseif platform_tag == "win_amd64"
-            return Windows(:x86_64)
+            return Platform("x86_64", "windows")
         end
     elseif platform_tag == "any"
         return AnyPlatform()
     end
-    return UnknownPlatform()
+    @error("Unknown platform", platform_tag)
 end
 
 function parse_wheel_filename(filename::String)
@@ -49,7 +57,7 @@ function parse_wheel_filename(filename::String)
             if python_version === nothing
                 return nothing
             end
-            push!(python_versions, join(split(python_version.captures[1], ""), "."))
+            push!(python_versions, string(python_version.captures[1][1:1], ".", python_version.captures[1][2:end]))
         end
 
         # Extract important ABI flags like debug, pymalloc, and wide unicode
